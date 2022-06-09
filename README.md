@@ -1,6 +1,13 @@
 # dotfiles
 My settings/configs for important applications
 
+# Dependencies
+
+- awesome wibar relies on the Arc Icon Theme in /usr/share/icons
+- JetBrainsMono Nerd Font
+
+# Installation
+
 These are tracked using a bare git repository with a zsh alias, for more information here is the [article](https://www.ackama.com/what-we-think/the-best-way-to-store-your-dotfiles-a-bare-git-repository-explained/)
 
 To use these files add ".dotfiles" to your [global gitignore](https://sebastiandedeyne.com/setting-up-a-global-gitignore-file/) so there aren't 
