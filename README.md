@@ -26,3 +26,10 @@ Don't report untracked files
 Then this next command will pull out all the files from the repo and place them accordingly in the working tree
 
 `$ config checkout`
+
+# Other Software I use
+
+> This is mostly just a place for me to write down everything I use so I don't forget when migrating to new machines
+
+pipewire
+wireplumber
