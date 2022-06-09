@@ -5,6 +5,7 @@ My settings/configs for important applications
 
 - awesome wibar relies on the [Arc Icon Theme](https://github.com/horst3180/arc-icon-theme#installation) in /usr/share/icons
 - [JetBrainsMono Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/JetBrainsMono)
+- alsa-utils package for amixer (volume widget)
 
 # Installation
 
