@@ -13,7 +13,7 @@ These are tracked using a bare git repository with a zsh alias, for more informa
 To use these files add ".dotfiles" to your [global gitignore](https://sebastiandedeyne.com/setting-up-a-global-gitignore-file/) so there aren't 
 wierd recursive tracking issues. Then clone the repo
 
-`$ git clone --bare <remote-git-repo-url> $HOME/.dotfiles`
+`$ git clone --bare https://github.com/nmandrus1/dotfiles.git $HOME/.dotfiles`
 
 Add/temporarily use this alias to run some specific setup commands (Note: my zsh config has this alias included)
 
