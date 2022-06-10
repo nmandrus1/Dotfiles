@@ -242,7 +242,7 @@ awful.screen.connect_for_each_screen(function(s)
             wibox.widget.systray(),
             todo_widget(),
             volume_widget({widget_type = 'icon_and_text', font = "JetBrainsMono 12"}),
-            battery_widget({show_current_level = true, font =  "JetBrainsMono 12"}),
+            -- battery_widget({show_current_level = true, font =  "JetBrainsMono 12"}),
             logout_menu_widget(),
         },
     }
@@ -565,4 +565,5 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 beautiful.useless_gap = 5
 
+-- wallpaper
 awful.util.spawn("nitrogen --restore")
