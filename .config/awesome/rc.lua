@@ -566,4 +566,7 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 beautiful.useless_gap = 5
 
 -- wallpaper
-awful.util.spawn("nitrogen --restore")
+gears.timer.start_new(10, function()
+  collectgarbage("step", 20000)
+  return true
+end)
