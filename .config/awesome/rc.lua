@@ -310,6 +310,16 @@ globalkeys = gears.table.join(
         {description = "raise audio", group = "audio"}),
     awful.key({ }, "XF86AudioMute", function() volume_widget:toggle(5) end, 
         {description = "mute audio", group = "audio"}),
+    
+    -- To get brightness working you have to add /usr/bin/xbacklight to %wheel NOPASSWD in visudo
+    -- then you have to go to /sys/class/backlight/*interface*/ and change the permissions of the 
+    -- files to allow others to read and write to them "chmod o=rx files"
+    awful.key({ }, "XF86MonBrightnessUp", function() awful.spawn("xbacklight -inc +10") end, 
+        {description = "raise brightness", group = "Brightness"}),
+    awful.key({ }, "XF86MonBrightnessDown", function() awful.spawn("xbacklight -dec +10") end, 
+        {description = "lower brightness", group = "Brightness"}),
+
+
 
 
 
@@ -565,4 +575,4 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 beautiful.useless_gap = 5
 
-awful.util.spawn("nitrogen --restore")
+-- awful.util.spawn("nitrogen --restore")
