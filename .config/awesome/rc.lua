@@ -311,18 +311,13 @@ globalkeys = gears.table.join(
     awful.key({ }, "XF86AudioMute", function() volume_widget:toggle(5) end, 
         {description = "mute audio", group = "audio"}),
     
-    -- To get brightness working you have to add /usr/bin/xbacklight to %wheel NOPASSWD in visudo
-    -- then you have to go to /sys/class/backlight/*interface*/ and change the permissions of the 
-    -- files to allow others to read and write to them "chmod o=rx files"
+  -- https://wiki.archlinux.org/title/Backlight#ACPI
+  -- added user to video group and followed arch wiki
     awful.key({ }, "XF86MonBrightnessUp", function() awful.spawn("xbacklight -inc +10") end, 
         {description = "raise brightness", group = "Brightness"}),
     awful.key({ }, "XF86MonBrightnessDown", function() awful.spawn("xbacklight -dec +10") end, 
         {description = "lower brightness", group = "Brightness"}),
-
-
-
-
-
+  
     -- Standard program
     awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
               {description = "open a terminal", group = "launcher"}),
@@ -553,6 +548,9 @@ client.connect_signal("manage", function (c)
     -- Set the windows at the slave,
     -- i.e. put it at the end of others instead of setting it master.
     -- if not awesome.startup then awful.client.setslave(c) end
+    c.shape = function(cr,w,h)
+        gears.shape.rounded_rect(cr,w,h,5)
+    end
 
     if awesome.startup
       and not c.size_hints.user_position
@@ -576,3 +574,9 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 beautiful.useless_gap = 5
 
 -- awful.util.spawn("nitrogen --restore")
+
+-- Colect Garbage
+gears.timer.start_new(10, function()
+  collectgarbage("step", 20000)
+  return true
+end)

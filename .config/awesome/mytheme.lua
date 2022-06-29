@@ -12,7 +12,7 @@ local themes_path = gfs.get_themes_dir()
 
 local theme = {}
 
-theme.font          = "JetBrains Mono Bold 10"
+theme.font          = "JetBrainsMono Bold 10"
 
 theme.bg_normal     = "#282c34" --"#222222"
 theme.bg_focus      = "#61afef" --"#535d6c"
@@ -134,14 +134,15 @@ function rounded_shape(size)
     end
 end
 
-theme.notification_font = theme.font
+theme.notification_font = "JetBrains Mono Bold 12"
 theme.notification_bg = theme.bg_normal
 theme.notification_fg = theme.fg_normal
-theme.notification_border_width = 2
-theme.notification_border_color = "#61afef"
-theme.notification_max_width = 300
-theme.notification_max_height = 50
-theme.notification_shape = rounded_shape(4)
+theme.notification_border_width = 0
+theme.notification_border_color = theme.bg_normal
+theme.notification_max_width = 400
+theme.notification_max_height = 70
+-- theme.notification_icon_size  
+theme.notification_shape = rounded_shape(5)
 
 
 return theme
