@@ -1,0 +1,3 @@
+#!/bin/zsh
+
+zsh $HOME/.config/rofi/powermenu.sh
