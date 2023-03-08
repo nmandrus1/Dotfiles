@@ -1,0 +1,36 @@
+format = """
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_status\
+$character"""
+
+[directory]
+style = "#61afef"
+truncate_to_repo = false
+truncation_length = 6
+
+[character]
+success_symbol = "[❯](#98c379)"
+error_symbol = "[❯](#e06c75)"
+vimcmd_symbol = "[❮](#c678dd)" 
+
+[git_branch]
+symbol = ' '
+style = "#c678dd"
+format = '\([$symbol$branch]($style)\)'
+
+[git_status]
+format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218) ($ahead_behind$stashed)]($style) "
+style = "#56b6c2"
+ahead = ''
+behind = ''
+diverged = ''
+conflicted = '='
+untracked = "?"
+modified = "!"
+staged = "+"
+renamed = '»'	
+deleted = "✘"
+stashed = "≡"
