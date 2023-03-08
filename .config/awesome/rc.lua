@@ -284,6 +284,10 @@ globalkeys = gears.table.join(
               function () awful.util.spawn(os.getenv("BROWSER") or "brave") end,
               {description = "show main menu", group = "awesome"}),
 
+    awful.key({ modkey,           }, "e", 
+              function () awful.util.spawn("neovide") end,
+              {description = "launch neovide", group = "awesome"}),
+
     -- Layout manipulation
     awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end,
               {description = "swap with next client by index", group = "client"}),
