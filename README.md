@@ -34,3 +34,4 @@ Then this next command will pull out all the files from the repo and place them 
 
 - pipewire
 - wireplumber
+- getnf (nerd font installer)
