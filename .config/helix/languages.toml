@@ -1,0 +1,5 @@
+use-grammars = {only = ["rust", "cpp", "c", "python", "toml", "javascript", "go", "zig", "nix", "zsh"]} 
+
+[[language]]
+name = "c"
+auto-format = true
