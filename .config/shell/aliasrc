@@ -39,11 +39,13 @@ alias \
 	sdn="shutdown -h now" \
 	e="$EDITOR" \
 	v="$EDITOR" \
+	hx="helix" \
 	p="pacman" \
 	xi="sudo xbps-install" \
 	xr="sudo xbps-remove -R" \
 	xq="xbps-query" \
-	z="zathura"
+	z="zathura" \
+	py="python3"
 
 alias \
 	lf="lfub" \
@@ -53,3 +55,6 @@ alias \
 
 # Special alias for dotfile management
 alias config="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
+
+# Alias for valgrind
+alias val="valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --verbose --log-file=valgrind-out.txt"
